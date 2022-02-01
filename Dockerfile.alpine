@@ -39,4 +39,7 @@ RUN wget -q https://github.com/nasa/fprime/archive/refs/tags/v${FPRIME_VERSION}.
     && unzip -qq fprime.zip -d /tmp \
     && rm -rf fprime.zip
 
+RUN git config --global user.email "nasa-fprime[bot]@users.noreply.github.com"
+RUN git config --global user.name "nasa-fprime[bot]"
+
 WORKDIR /tmp/fprime-${FPRIME_VERSION}
